@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI Tool</title>
+        <link rel="icon" type="image/x-icon" href="https://icons.g10.app/g10.ico">
+        <link rel="stylesheet" type="text/css" href="https://g10.app/style.css">
+        <meta charset="UTF-8" />
+		<style>
+			.tooltip {
+			  position: relative;
+			  display: inline-block;
+			  border-bottom: 1px dotted black;
+			}
+			
+			.tooltip .tooltiptext {
+			  visibility: hidden;
+			  background-color: black;
+			  color: #fff;
+			  text-align: justify;
+			  border-radius: 6px;
+			  padding: 1em 1em;
+  			  text-justify: inter-word;
+
+			  
+			  /* Position the tooltip */
+			  position: absolute;
+			  z-index: 1;
+			  bottom: 100%;
+			  right: 0%;
+			  left: 0%;
+			  margin-left: -100%;
+			  margin-right: -100%;
+
+			}
+			
+			.tooltip:hover .tooltiptext {
+			  visibility: visible;
+			}
+		</style>
+    </head>
+    <body>
+        <nav class="header" style="z-index: 1;">
+			<ul class="nav-links">
+				<div class="menu">
+					<a href="https://g10.app"> <img src="https://icons.g10.app/g10.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
+					<li class="services">
+						<a href="https://g10.app/g10">G10</a>
+						<ul class="dropdown">
+							<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/G10/releases">Releases</a> </li>
+							<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/G10/">Source</a> </li>
+							<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/G10/wiki">Wiki</a> </li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/gport">GPort</a>
+						<ul class="dropdown">
+							<li> <a class="header_link" href="https://github.com/Jacob-C-Smith/gport/releases">Releases</a> </li>
+							<li> <a class="header_link" href="https://github.com/Jacob-C-Smith/gport/">Source</a> </li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/schema">GSchema</a>
+						<ul class="dropdown">
+							<li> <a class="header_link" href="https://github.com/Jacob-C-Smith/gschema/releases">Releases</a> </li>
+							<li> <a class="header_link" href="https://github.com/Jacob-C-Smith/gschema/">Source</a> </li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/people">People</a>
+						<ul class="dropdown">
+							<li> <a class="header_link" href="https://www.linkedin.com/in/jacob-c-smith-id/">Jake </a> </li>
+							<li> <a class="header_link" href=".">Ben  </a> </li>
+							<li> <a class="header_link" href=".">Aiden</a> </li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/products">Products</a>
+						<ul class="dropdown">
+							<li> <a class="header_link" href="https://g10.app/products/tanks">Tanks!</a></li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/utilities">Utilities</a>
+						<ul class="dropdown">
+							<li> <a class="header_link" href="https://g10.app/utilities/shader-compiler">Shader Compiler</a></li>
+							<li> <a class="header_link" href="https://g10.app/utilities/ai-tool">AI Tool</a></li>
+							<li> <a class="header_link" href="https://g10.app/utilities/input-tool">Input Tool</a></li>
+						</ul>
+					</li>
+				</div>
+			</ul>
+		</nav>
+		<hr>
+        <nav class="header" style="z-index: 1;">
+			<ul class="nav-links">
+				<div class="menu">
+					<a href="https://g10.app/utilities"> <img src="https://icons.g10.app/tool.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
+					<li class="services">
+						<a href="https://g10.app/utilities/shader-compiler/">Shader Compiler</a>
+						<ul class="dropdown">
+							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/shader-compiler/releases/tag/2.0">Releases</a> </li>
+							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/shader-compiler">Source</a> </li>
+                            <li> <a class="header_link"href="https://github.com/Jacob-C-Smith/shader-compiler/#">Manual</a> </li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/utilities/ai-tool/">AI Tool</a>
+						<ul class="dropdown">
+							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/ai-tool/releases/latest">Releases</a> </li>
+							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/ai-tool">Source</a> </li>
+                            <li> <a class="header_link"href="https://github.com/Jacob-C-Smith/ai-tool/#">Manual</a> </li>
+						</ul>
+					</li>
+					<li class="services">
+						<a href="https://g10.app/utilities/input-tool/">Input Tool</a>
+						<ul class="dropdown">
+							<!--<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/input-tool/">Releases</a> </li>
+							<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/input-tool">Source</a> </li>
+                            <li> <a class="header_link"  href="#">TODO: Manual</a> </li>-->
+						</ul>
+					</li>
+				</div>
+			</ul>
+		</nav>
+		<hr>
+		<nav class="header" style="z-index: 1;">
+			<ul class="nav-links">
+				<div class="menu">
+					<a href="https://g10.app/utilities/ai-tool"> <img src="https://icons.g10.app/ai.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
+					<li class="services">
+						<a href="https://g10.app/utilities/ai-tool">Manual</a>
+					</li>
+				</div>
+			</ul>
+		</nav>
+		<hr>
+		<div class="body" style="padding-top: 1em;">
+			<div style="display: table; width: 100%; justify-content: center; margin: 0; text-align: center;">
+				<h1 style="margin: 0.75em 0% 0.5em 0%;"><b>AI Tool</b></h1>
+					<div width="100%" style="margin: 0 35%">
+						<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+							<div style="padding: 0;margin: 0% 0% 0em 0%;">
+								The <b>AI Tool</b> is a program for working with G10 AIs. The program allows the user to create, load, view, change, and save AIs.
+								<p></p>
+							</div>
+							<div style="padding: 0;margin: 1em 0% 0% 0%;">
+								<i style="margin-top: 1em;"> <b>NOTE</b>: This project has nothing to do with neural networks or generative AI.</i>
+							</div>
+						</div>
+					</div>
+			</div>
+			<h3 style="margin: 2em 0% 1% 0%; text-align: center;">Preparation</h3>
+			<div width="100%" style="margin: 0 35%">
+				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+					<div style="padding: 0;margin: 0% 0% 0em 0%;">
+						Be sure to set a 
+						<code style="display: inline-block;background-color: lightgray;border-radius: 1em;border: 1px solid #000000;padding: 0.1em 0.5em 0.125em 0.5em;">
+							<div class="tooltip" style="display: inline-block;">
+								G10_SOURCE_PATH
+								<span class="tooltiptext">
+									<div><p style="display:inline;border-bottom: 1px dotted white;">G10_SOURCE_PATH</p> is an environment variable referencing the path to the directory containing the G10 executable.</div>
+								</span>
+							</div>
+						</code>
+						environment variable.
+					</div>
+				</div>
+			</div>
+			<h3 style="margin: 2em 0% 1% 0%; text-align: center;">Instructions</h3>
+			<div width="100%" style="margin: 0 35%">
+				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+					<p style="margin: 0% 0% 0.5em 0%; ">0. <b><a href="https://github.com/Jacob-C-Smith/ai-tool/releases/latest">Download</a></b> the G10 AI tool for your machine</p>
+				</div>
+				<h4 style="margin: 1em 0% 1em 0%; text-align: center;">Create and save an AI</h4>
+				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+					<p style="margin: 0% 0% 0.5em 0%; ">1. <b>Open</b> the G10 AI tool</p>
+					<div style="margin: 0% 0% 0.5em 0%; ">
+						2. 
+						<b>Populate</b>
+						the 
+						<code style="display: inline-block;background-color: lightgray;border-radius: 1em;border: 1px solid #000000;padding: 0.1em 0.5em 0.125em 0.5em;">
+							<div class="tooltip" style="display: inline-block;">
+									required
+								<span class="tooltiptext">
+									<div style="display: inline-block;">
+										The AI tool requires the user specifies:
+										<p style="margin-top: 1em;">
+											<table>
+												<tr>
+													<td></td>
+													<td style="margin-left: 1em;">a <p style="display:inline;border-bottom: 1px dotted white;">name</p></td>
+												</tr>
+												<tr>
+													<td style="text-align: right;">*</td>
+													<td style="margin-left: 1em;">a list of <p style="display:inline;border-bottom: 1px dotted white;">states</p></td>
+												</tr>
+												<tr>
+													<td style="text-align: right;">**</td>
+													<td style="margin-left: 1em;">an <p style="display:inline;border-bottom: 1px dotted white;">initial state</p></li>
+												</tr>
+											</table>
+										</p>
+										<p style="margin-top: 1em;"></p>
+										*The
+										<p style="display:inline;border-bottom: 1px dotted white;">states</p>
+										 list must have at least one state
+										<p style="margin-top: 1em;"></p>
+										**The
+										<p style="display:inline;border-bottom: 1px dotted white;">initial state</p>
+										 must be a part of the states array
+									</div>
+								</span>
+							</div>
+						</code>
+
+						fields
+					</div>
+					<p style="margin: 0% 0% 0.5em 0%; ">3. 
+						<b>Save</b>
+						the finished AI to your filesystem
+					</p>
+				</div>
+				<h4 style="margin: 1em 0% 1em 0%; text-align: center;">Load and view an AI</h4>
+				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+					<p style="margin: 0% 0% 0.5em 0%; ">1. <b>Drag 'n' drop</b> your AI JSON file into the AI tool</p>
+					<div style="margin: 0% 0% 0.5em 0%; ">
+						2. <b>Inspect</b> the AI
+					</div>
+					<p style="margin: 0% 0% 0.5em 0%; ">3. 
+						<b>Save</b>
+						the finished AI to your filesystem
+					</p>
+				</div>
+			</div>
+		
+			<h3 style="margin: 2em 0% 2em 0%; text-align: center;">Screenshots</h3>
+			<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: center;">
+				<div width="100%" style="margin: 0% 0% 0% 0%;">
+					<img src="ai-tool-use.png" style="image-rendering: pixelated;width:100%;">
+					<p style="margin: 0% 0% 3em 0%;"><i>A typical use case on the desktop.</i></p>
+				</div>
+				<div width="100%" style="margin: 0% 0% 0% 0%;">
+					<img src="ai-tool.png" style="image-rendering: pixelated;width:100%">
+					<p style="margin: 0% 0% 0% 0%;"><i>The AI tool after it is <b>opened</b></i></p>
+					<p style="margin: 0% 0% 0% 0%;">
+						<div style="margin: 0% 0% 3em 0%;"><i>
+							Note that the path has been autofilled with the 
+							<code style="display: inline-block;background-color: lightgray;border-radius: 1em;border: 1px solid #000000;padding: 0.1em 0.5em 0.125em 0.5em;">
+								<div class="tooltip" style="display: inline-block;">
+									G10_SOURCE_PATH 
+									<span class="tooltiptext"> <div><p style="display:inline;border-bottom: 1px dotted white;">G10_SOURCE_PATH</p> is an environment variable referencing the path to the directory containing the G10 executable.</div> </span>
+								</div>
+							</code>
+							environment variable.
+						</i></div>
+					</p>
+				</div>
+				<!--
+					<div width="100%" style="margin: 0% 0% 0% 0%;">
+						<img src="shader-compiler-good.png" style="image-rendering: pixelated;width:100%">
+						<p style="margin: 0% 0% 0em 0%;"><i>The shader compiler after <b style="color: #00c000;">successfully</b> compiling graphics shaders.</i></p>
+						<p style="margin: 0% 0% 3em 0%;"><i>Note the success message</i></p>
+					</div>
+					<div width="100%" style="margin: 0% 0% 0% 0%;">
+						<img src="shader-compiler-bad.png" style="image-rendering: pixelated;width:100%">
+						<p style="margin: 0% 0% 0em 0%;"><i>The shader compiler after <b style="color: #ff0000;">erroneously</b> compiling ray shaders.</i></p>
+						<p style="margin: 0% 0% 3em 0%;"><i>Note the checks and exclaimation points, corresponding to successes and failures</i></p>
+					</div>
+					<div width="100%" style="margin: 0% 0% 0% 0%;">
+						<img src="shader-compiler-invalid.png" style="image-rendering: pixelated;width:100%">
+						<p style="margin: 0% 0% 0em 0%;"><i>The shader compiler after attempting to parse an <b style="color: #ff0000;">invalid input</b> file</i></p>
+						<p style="margin: 0% 0% 6em 0%;"><i>Attempting to compile a file that is not a shader produces an error </i></p>
+					</div>
+				-->
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>G10 AI Tool, Copyright © 2023, Jacob Smith. Made with ❤️ for 👤 on 🌎</p>
+		</div>
+    </body>
+</html>
