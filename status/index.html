@@ -66,228 +66,347 @@
 		<hr>
 		
         <div class="body" style="padding-top: 1em;">
-
             <div style="display: table; width: 100%; justify-content: center; margin: 0; text-align: center;">
 				<h1 style="margin: 0.75em 0% 0.5em 0%;"><b>Status</b></h1>
-				<div width="100%" style="margin: 0 35%">
+				<div width="100%" style="margin: 0 25%">
 					<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-						<div style="padding: 0;margin: 0% 0% 0em 0%;">
-							This page is used to monitor the continuous integration of each G10 dependency. 
+						<div style="padding: 0;margin: 0% 35% 3em 35%;">
+							This page is used to monitor the continuous integration of each G10 dependency. Higher items depend on lower items
 						</div>
-					</div>
-				</div>
-			</div>
-			
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">G10</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
-                            <tr> 
+
+                        <table style="border-collapse: collapse">
+                            <tr>
+                                <td><b>Description</b></td>
+                                <td><b>Icon</b></td>
+                                <td><b>CI/CD status</b></td>
+                                <td><b>Notes</b></td>
+                                <td><b style="padding-right: 1em;">Tested?</b> </td>
+                                <td><b style="padding-right: 1em;">Thread safe? </b> </td>
+                            </tr>
+
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">G10</b></td>
+                            </tr>
+
+                            <tr>
+                                <td>A 3D game engine</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/g10"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/g10.ico"></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/g10"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/g10.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/g10"><img src="https://github.com/Jacob-C-Smith/g10/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                            </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
-
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">G10 Tools</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
-                            <tr> 
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://g10.app/utilities/ai-tool/"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/ai.ico"></a>
-                                    </div>
+                                    <p><b>TODO:</b> Set up Github CI/CD </p>
                                 </td>
-                                <td><a href="https://github.com/Jacob-C-Smith/ai-tool"><img src="https://github.com/Jacob-C-Smith/ai-tool/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>❌</td>
+                                <td>✅</td>
                             </tr>
-                            <tr> 
-                                <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://g10.app/utilities/shader-compiler/"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/shader-compiler.ico"></a>
-                                    </div>
-                                </td>
-                                <td><a href="https://github.com/Jacob-C-Smith/shader-compiler"><img src="https://github.com/Jacob-C-Smith/shader-compiler/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                            </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
 
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">Schema</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
                             <tr>
+                                <td>Describes valid G10 JSON</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://schema.g10.app/"><img style="width: 50%;" src="https://icons.g10.app/gschema.ico"></a>
-                                        <p>gschema</p>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://schema.g10.app/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/gschema.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://schema.g10.app/"><img src="https://github.com/Jacob-C-Smith/gschema/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">G10 Tools</b></td>
                             </tr>
                             <tr>
+                                <td>Finite state machine tool</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://schema.g10.app/"><img style="width: 50%;" src="https://icons.g10.app/ui.ico"></a>
-                                        <p>ui schema</p>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://g10.app/utilities/ai-tool/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/ai.ico"></a>
                                     </div>
                                 </td>
-                                <td><a href="https://schema.g10.app/"><img src="https://github.com/Jacob-C-Smith/ui-schema/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main"></a></td>
-                            </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
-
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">User Interface</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
-                            <tr> 
+                                <td><a href="https://github.com/Jacob-C-Smith/ai-tool"><img src="https://github.com/Jacob-C-Smith/ai-tool/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/ui"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/ui.ico"></a>
+                                    <p><b>TODO:</b> Integrate UI file selector </p>
+                                </td>
+                                <td><b>⛔</b></td>
+                                <td><b>⛔</b></td>
+                            </tr>
+                            <tr>
+                                <td>Tool for compiling GLSL source code to SPIR-V binaries, via the Vulkan SDK</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://g10.app/utilities/shader-compiler/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/shader-compiler.ico"></a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/shader-compiler"><img src="https://github.com/Jacob-C-Smith/shader-compiler/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                    <p><b>TODO:</b> Integrate UI file selector </p>
+                                </td>
+                                <td><b>⛔</b></td>
+                                <td><b>⛔</b></td>
+                            </tr>
+                            <tr>
+                                <td>Input and bind tool</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://g10.app/utilities/input-tool/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/ginput.ico"></a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/input-tool"><img src="https://github.com/Jacob-C-Smith/input-tool/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                    <p><b>NOTE:</b> Not yet under development. Check in soon!</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">User Interface</b></td>
+                            </tr>
+                            <tr>
+                                <td>A minimal user interface library</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/ui"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/ui.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/ui"><img src="https://github.com/Jacob-C-Smith/ui/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                            </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
-
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">Performance Computing</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
-                            <tr> 
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/vectorize"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/vectorized.ico"></a>
+                                    <p><b>TODO:</b> Integrate path selector</p>
+                                    <p><b>TODO:</b> Finish file selector</p>
+                                </td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+
+                            <tr>
+                                <td>Describes valid user interface JSON</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://schema.g10.app/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/ui.ico"></a>
+                                    </div>
+                                </td>
+                                <td><a href="https://schema.g10.app/"><img src="https://github.com/Jacob-C-Smith/ui-schema/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">Performance Computing</b></td>
+                            </tr>
+                            <tr>
+                                <td>High level abstractions for computation on a single core</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/vectorize"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/vectorized.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/vectorize"><img src="https://github.com/Jacob-C-Smith/vectorize/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                            </tr>
-                            <tr> 
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/parallel"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/parallel.ico"></a>
+                                    <p><b>NOTE:</b> In development. No stable release.</p>
+                                </td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+                            <tr>
+                                <td>High level abstractions for computation on many cores</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/parallel"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/parallel.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/parallel"><img src="https://github.com/Jacob-C-Smith/parallel/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                            </tr>
-                            <tr> 
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/distributed"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/distributed.ico"></a>
+                                    <p><b>NOTE:</b>  In development. No stable release.</p>
+                                </td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+                            <tr>
+                                <td>High level abstractions for computation on multiple machines</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/distributed"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/distributed.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/distributed"><img src="https://github.com/Jacob-C-Smith/distributed/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                            </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
-
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">Parser / Serializer</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
-                            <tr>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/json"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/json.ico"></a>
+                                    <p><b>NOTE:</b> Not yet under development. Check in soon!</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">Parser / Serializer</b></td>
+                            </tr>
+                            <tr>
+                                <td>Parse and serialize JSON values</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://g10.app/utilities/json/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/json.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/json"><img src="https://github.com/Jacob-C-Smith/json/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td>✅</td>
+                                <td>❌</td>
                             </tr>
-							<tr>
+                            <tr>
+                                <td>Cross platform file system navigation</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/path"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/path.ico"></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://g10.app/utilities/path/"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/path.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/path"><img src="https://github.com/Jacob-C-Smith/path/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td><b>TODO:</b> Finish all test cases</td>
+                                <td>⚠️</td>
+                                <td>❌</td>
                             </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
-
-            <h3 style="margin: 1em 0% 1em 0%; text-align: center;">Abstract Data Types</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">Abstract Data Types</b></td>
+                            </tr>
                             <tr>
+                                <td>Array implementation</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/array"><p><img style="width: 50%;height: 50%;" src="https://icons.g10.app/array.ico"></p></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/array"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/array.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/array"><img src="https://github.com/Jacob-C-Smith/array/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td><b>TODO:</b> Implement slice function</td>
+                                <td>✅</td>
+                                <td>✅</td>
                             </tr>
+
                             <tr>
+                                <td>Dictionary implementation</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/dict"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/dict.ico"></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/dict"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/dict.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/dict"><img src="https://github.com/Jacob-C-Smith/dict/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td>✅</td>
+                                <td>✅</td>
                             </tr>
+
                             <tr>
+                                <td>Graph implementation</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/queue"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/queue.ico"></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/graph"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/graph.ico"></a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/graph"><img src="https://github.com/Jacob-C-Smith/graph/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                    <p><b>NOTE:</b> Not yet under development. Check in soon!</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Queue implementation</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/queue"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/queue.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/queue"><img src="https://github.com/Jacob-C-Smith/queue/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td>✅</td>
+                                <td>✅</td>
                             </tr>
-                            <tr> 
+                            <tr>
+                                <td>Stack implementation</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/stack"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/stack.ico"></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/stack"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/stack.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/stack"><img src="https://github.com/Jacob-C-Smith/stack/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td>✅</td>
+                                <td>✅</td>
                             </tr>
-                        </table>
-					</div>
-				</div>
-			</div>
 
-			<h3 style="margin: 1em 0% 1em 0%; text-align: center;">Synchronization</h3>
-			<div width="100%" style="margin: 0 35%">
-				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
-					<div style="padding: 0;margin: 0% 0% 0em 0%;">
-                        <table>
-                            <tr> 
+                            <tr>
+                                <td>Tree implementation</td>
                                 <td>
-                                    <div style="padding: 8px; display: block;width: 100%;justify-content: center;margin: 0;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/sync"><img style="width: 50%;height: 50%;" src="https://icons.g10.app/sync.ico"></a>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/tree"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/tree.ico"></a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/tree"><img src="https://github.com/Jacob-C-Smith/tree/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                    <p><b>NOTE:</b> Not yet under development. Check in soon!</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr style="background-color: black;">
+                                <td colspan="6"><b style="color: white;padding: 0.5em">Synchronization</b></td>
+                            </tr>
+
+                            <tr>
+                                <td>Cross platform synchronization primitives and high-precision timing</td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/sync"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/sync.ico"></a>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/sync"><img src="https://github.com/Jacob-C-Smith/sync/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                    <p><b>NOTE:</b> Not yet under development. Check in soon!</p>
+                                </td>
+                                <td>⛔</td>
+                                <td>⛔</td>
                             </tr>
                         </table>
+
+                        <table style="color: white;background-color: black;">
+                            <tr>
+                                <td><b>KEY</b></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>TESTING : </b></td>
+                                <td>✅ - Strong testing</td>
+                                <td>⚠️ - Weak testing</td>
+                                <td>❌ - No testing</td>
+                                <td>⛔ - No need to test</td>
+                            </tr>
+
+                            <tr>
+                                <td><b>THREAD-SAFETY : </b></td>
+                                <td>✅ - Thread safe</td>
+                                <td></td>
+                                <td>❌ - Not thread safe</td>
+                                <td>⛔ - No need for thread safety</td>
+                            </tr>
+                        </table>
+                        
 					</div>
 				</div>
-			</div>
 
+			</div>
+            <div style="display: table; width: 100%; justify-content: center; margin: 0; text-align: center;">
+
+			    <div width="100%" style="margin: 0 5%">
+			    	<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+                        
+			    	</div>
+			    </div>
+			</div>
             <p style="margin: 0 0 6em 0;"></p>
 		</div>
 
