@@ -605,7 +605,11 @@
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/dict"><img src="https://github.com/Jacob-C-Smith/dict/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                                <td></td>
+                                <td>
+                                    <p><b>TODO:</b>Remove the global lock</p>
+                                    <p><b>TODO:</b>Allocate an array of N locks in dict_construct, where N is the size parameter.</p>
+                                    <p><b>TODO:</b>During dict operations, lock the mutex corresponding to the index of the hash table.</p>
+                                </td>
                                 <td>✅</td>
                                 <td>✅</td>
                             </tr>
