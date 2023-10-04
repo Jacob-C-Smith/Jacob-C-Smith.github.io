@@ -75,13 +75,40 @@
 					<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
 						<div style="padding: 0;margin: 0% 35% 3em 35%;">
 							<p style="margin: 0 0 1em 0;">This page is used to monitor the continuous integration of each G10 dependency. Higher groups of items <i>generally</i> depend on lower groups of items. </p>
-                            <p>Clicking on a group will collapse it.</p>
+                            <p style="margin: 0 0 1em 0;">Clicking on a group will collapse it.</p>
+                            
+                            <table style="border-collapse: collapse;margin: 0% 25%;width: 50%;border-color: black;">
+                                <tr style="background-color: black; color:white;">
+                                    <td colspan="2" style="text-align: center;"><b>Key</b></td>
+                                </tr>
+                                <tr style="background-color: black;">
+                                    <td colspan="6" style="height: 0.125em;"></td>
+                                </tr>
+                                <tr>
+                                    <td>✔️</td>
+                                    <td><b>Complete</b></td>
+                                </tr>
+                                <tr>
+                                    <td>⚠️</td>
+                                    <td><b>Incomplete</b></td>
+                                </tr>
+                                <tr>
+                                    <td>❌</td>
+                                    <td><b>Not started</b></td>
+                                </tr>
+                                <tr>
+                                    <td>☑️</td>
+                                    <td><b>N/A</b></td>
+                                </tr>
+                            </table>
 						</div>
                     </div>
                 </div>
 
+                
+
                 <div width="100%" style="margin:0 10%">
-                    <button type="button" class="collapsible" id="g10" name="g10">G10</button>
+                    <button type="button" class="collapsible" id="g10" name="g10">⚠️G10</button>
                     <div class="content" width="100%">
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -116,7 +143,7 @@
                                 <td>
                                 </td>
                                 <td>❌</td>
-                                <td>✅</td>
+                                <td>✔️</td>
                             </tr>
 
                             <tr>
@@ -150,15 +177,15 @@
                                 </td>
                                 <td><a href="https://schema.g10.app/"><img src="https://github.com/Jacob-C-Smith/gschema/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main"></a></td>
                                 <td></td>
-                                <td>⛔</td>
-                                <td>⛔</td>
+                                <td>☑️</td>
+                                <td>☑️</td>
                             </tr>
                             <tr style="background-color: black;">
                                 <td colspan="6" style="height: 0.25em;"></td>
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="g10_tools" name="g10_tools">G10 Tools</button>
+                    <button type="button" class="collapsible" id="g10_tools" name="g10_tools">⚠️G10 Tools</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -191,8 +218,8 @@
                                 <td>
                                     <p><b>TODO:</b> Integrate UI file selector </p>
                                 </td>
-                                <td><b>⛔</b></td>
-                                <td><b>⛔</b></td>
+                                <td><b>☑️</b></td>
+                                <td><b>☑️</b></td>
                             </tr>
                             
                             <tr>
@@ -209,8 +236,8 @@
                                 <td>
                                     <p><b>TODO:</b> Integrate UI file selector </p>
                                 </td>
-                                <td><b>⛔</b></td>
-                                <td><b>⛔</b></td>
+                                <td><b>☑️</b></td>
+                                <td><b>☑️</b></td>
                             </tr>
                             
                             <tr>
@@ -237,7 +264,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="user_interface" name="user_interface">User Interface</button>
+                    <button type="button" class="collapsible" id="user_interface" name="user_interface">⚠️User Interface</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -285,15 +312,15 @@
                                 </td>
                                 <td><a href="https://schema.g10.app/"><img src="https://github.com/Jacob-C-Smith/ui-schema/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main"></a></td>
                                 <td></td>
-                                <td>⛔</td>
-                                <td>⛔</td>
+                                <td>☑️</td>
+                                <td>☑️</td>
                             </tr>
                             <tr style="background-color: black;">
                                 <td colspan="6" style="height: 0.25em;"></td>
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="performance_computing" name="performance_computing">Performance Computing</button>
+                    <button type="button" class="collapsible" id="performance_computing" name="performance_computing">⚠️Performance Computing</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -368,7 +395,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="abstract_data_iii" name="abstract_data_iii">Abstract Data III</button>
+                    <button type="button" class="collapsible" id="abstract_data_iii" name="abstract_data_iii">❌Abstract Data III</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -408,7 +435,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="parser_serializer" name="parser_serializer">Parser / Serializer</button>
+                    <button type="button" class="collapsible" id="parser_serializer" name="parser_serializer">⚠️Parser / Serializer</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -429,38 +456,6 @@
 
                             <tr>
                                 <td>
-                                    <h3> base-16 </h3>
-                                    <p>Encode and decode base16 data</p>
-                                </td>
-                                <td>
-                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/base-16"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/base-16.ico"></a>
-                                    </div>
-                                </td>
-                                <td><a href="https://github.com/Jacob-C-Smith/base-16"><img src="https://github.com/Jacob-C-Smith/base-16/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                                <td><p><b>NOTE:</b> Not yet under development. Check in soon!</p></td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <h3> base-32 </h3>
-                                    <p>Encode and decode base32 data</p>
-                                </td>
-                                <td>
-                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/base-32"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/base-32.ico"></a>
-                                    </div>
-                                </td>
-                                <td><a href="https://github.com/Jacob-C-Smith/base-32"><img src="https://github.com/Jacob-C-Smith/base-32/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                                <td><p><b>NOTE:</b> Not yet under development. Check in soon!</p></td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-
-                            <tr>
-                                <td>
                                     <h3> base-64 </h3>
                                     <p>Encode and decode base64 data</p>
                                 </td>
@@ -472,7 +467,7 @@
                                 <td><a href="https://github.com/Jacob-C-Smith/base-64"><img src="https://github.com/Jacob-C-Smith/base-64/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td><p><b>TODO:</b> Write tester program</p></td>
                                 <td>❌</td>
-                                <td>⛔</td>
+                                <td>☑️</td>
                             </tr>
 
                             <tr>
@@ -520,7 +515,7 @@
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/json"><img src="https://github.com/Jacob-C-Smith/json/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td></td>
-                                <td>✅</td>
+                                <td>✔️</td>
                                 <td>❌</td>
                             </tr>
                             <tr>
@@ -546,7 +541,7 @@
 
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="abstract_data_ii" name="abstract_data_ii">Abstract Data II</button>
+                    <button type="button" class="collapsible" id="abstract_data_ii" name="abstract_data_ii">❌Abstract Data II</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -622,7 +617,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="abstract_data_i" name="abstract_data_i">Abstract Data I</button>
+                    <button type="button" class="collapsible" id="abstract_data_i" name="abstract_data_i">⚠️Abstract Data I</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -653,8 +648,8 @@
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/array"><img src="https://github.com/Jacob-C-Smith/array/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td></td>
-                                <td>✅</td>
-                                <td>✅</td>
+                                <td>✔️</td>
+                                <td>✔️</td>
                             </tr>
                             <tr>
                                 <td>
@@ -672,8 +667,8 @@
                                     <p><b>TODO:</b>Allocate an array of N locks in dict_construct, where N is the size parameter.</p>
                                     <p><b>TODO:</b>During dict operations, lock the mutex corresponding to the index of the hash table.</p>
                                 </td>
-                                <td>✅</td>
-                                <td>✅</td>
+                                <td>✔️</td>
+                                <td>✔️</td>
                             </tr>
                             
                             <tr>
@@ -688,8 +683,8 @@
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/queue"><img src="https://github.com/Jacob-C-Smith/queue/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td></td>
-                                <td>✅</td>
-                                <td>✅</td>
+                                <td>✔️</td>
+                                <td>✔️</td>
                             </tr>
                             <tr>
                                 <td>
@@ -703,8 +698,8 @@
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/stack"><img src="https://github.com/Jacob-C-Smith/stack/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td> </td>
-                                <td>✅</td>
-                                <td>✅</td>
+                                <td>✔️</td>
+                                <td>✔️</td>
                             </tr>
                             <tr>
                                 <td>
@@ -720,8 +715,8 @@
                                 <td>
                                     <p><b>NOTE:</b> In development. No stable release.</p>
                                 </td>
-                                <td></td>
-                                <td></td>
+                                <td>❌</td>
+                                <td>❌</td>
                             </tr>
                             <tr>
                                 <td>
@@ -737,15 +732,15 @@
                                 <td>
                                     <p></p>
                                 </td>
-                                <td>✅</td>
-                                <td>⛔</td>
+                                <td>✔️</td>
+                                <td>☑️</td>
                             </tr>
                             <tr style="background-color: black;">
                                 <td colspan="6" style="height: 0.25em;"></td>
                             </tr>
                         </table>
                     </div>
-                    <button type="button" class="collapsible" id="primitives" name="primitives">Primitives</button>
+                    <button type="button" class="collapsible" id="primitives" name="primitives">⚠️Primitives</button>
                     <div class="content" >
                         <table style="border-collapse: collapse;margin: 0%;width: 100%;">
                             <tr style="background-color: black;">
@@ -778,8 +773,8 @@
                                 <td>
                                     
                                 </td>
-                                <td>⛔</td>
-                                <td>⛔</td>
+                                <td>☑️</td>
+                                <td>☑️</td>
                             </tr>
                             <tr>
                                 <td>
@@ -804,7 +799,7 @@
                                     <p><b>TODO:</b>Write a tester</p>
                                 </td>
                                 <td>❌</td>
-                                <td>⛔</td>
+                                <td>☑️</td>
                             </tr>
 
                             <tr>
@@ -821,8 +816,8 @@
                                 <td>
                                     <p><b>NOTE:</b> In development. No stable release.</p>
                                 </td>
-                                <td>⛔</td>
-                                <td>⛔</td>
+                                <td>☑️</td>
+                                <td>☑️</td>
                             </tr>
                             <tr style="background-color: black;">
                                 <td colspan="6" style="height: 0.25em;"></td>
