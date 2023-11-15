@@ -4,40 +4,12 @@
         <title>G10 Web</title>
         <link rel="icon" type="image/x-icon" href="https://icons.g10.app/g10.ico">
         <link rel="stylesheet" type="text/css" href="https://g10.app/style.css">
+		<script src="https://unpkg.com/htmx.org@1.9.8"></script>
         <meta charset="UTF-8" />
     </head>
     <body>
-		<nav class="header" style="z-index: 1;">
-			<ul class="nav-links">
-				<div class="menu">
-					<a href="https://g10.app"> <img src="https://icons.g10.app/g10.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
-					<li class="services"><a href="https://g10.app/g10-desktop">G10 Desktop</a></li>
-                    <li class="services"><a href="https://g10.app/g10-web">G10 Web</a></li>
-					<li class="services"><a href="https://g10.app/gport">Gport</a></li>
-					<li class="services"><a href="https://g10.app/schema">Gschema</a></li>
-					<li class="services">
-						<a href="https://g10.app/people">People</a>
-						<ul class="dropdown">
-							<li> <a class="header_link" href="https://g10.app/people/jake/">Jake</a> </li>
-							<li> <a class="header_link" href="http://benjamindaly.com/">Ben</a> </li>
-							<li> <a class="header_link" href=".">Aiden</a> </li>
-						</ul>
-					</li>
-					<li class="services"><a href="https://g10.app/products">Products</a></li>
-					<li class="services"><a href="https://g10.app/utilities">Utilities</a></li>
-					<li><a href="https://g10.app/status">Status</a></li>
-				</div>
-			</ul>
-		</nav>
-		<hr>
-		<nav class="header" style="z-index: 1;">
-			<ul class="nav-links">
-				<div class="menu">
-					<a href="https://g10.app/g10-web"> <img src="https://icons.g10.app/g10-browser.ico" style="image-rendering: pixelated;" width="32px" height="32px"> </a>
-				</div>
-			</ul>
-		</nav>
-		<hr>
+		<div hx-get="https://g10.app/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+		<div hx-get="https://g10.app/g10-web/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
 		<div class="body">
 			<p>New technologies like WebGPU and WebAssembly are enabling high fidelity, high performance</p>
