@@ -4,6 +4,7 @@
         <title>Jake</title>
         <link rel="icon" type="image/x-icon" href="https://icons.g10.app/g10.ico">
         <link rel="stylesheet" type="text/css" href="https://g10.app/style.css">
+		<script src="https://unpkg.com/htmx.org@1.9.8"></script>
         <meta charset="UTF-8" />
     </head>
     <body>
@@ -44,15 +45,7 @@
 			</ul>
 		</nav>
 		<hr>
-		<nav class="header" style="z-index: 1;">
-			<ul class="nav-links">
-				<div class="menu">
-					<a href="https://g10.app"> <img src="https://icons.g10.app/jake.png" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
-					<li class="services"><a href="https://g10.app/people/jake/vectorize">Vectorize</a></li>
-				</div>
-			</ul>
-		</nav>
-		<hr>
+		<div hx-get="https://g10.app/people/jake/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
 		<div class="body" style="padding-top: 1em;">
 			<div style="display: table; width: 100%; justify-content: center; margin: 0; text-align: center;">
