@@ -1,3 +1,82 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: white;
+        --foreground: black;
+    }
+      
+    body {
+        background-color: var(--background);
+    }
+
+    .footer {
+        padding: 1% 1% 1% 1%;
+        color: white;
+        background-color: black;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+    }
+    
+    .header {
+        background-color: var(--background);
+        color: var(--foreground);
+    }
+
+    .nav-links a {
+        color: var(--foreground);
+    }
+
+    hr {
+        border: 0.5px solid var(--foreground);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: black;
+        --foreground: white;
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+    }
+
+    .footer {
+        padding: 1% 1% 1% 1%;
+        color: black;
+        background-color: white;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+    }
+
+    .header {
+        background-color: var(--background);
+        color: var(--foreground);
+    }
+    .nav-links a {
+        color: var(--foreground);
+    }
+
+    hr {
+        border: 0.5px solid var(--foreground);
+    }
+
+    .invertable_icon
+    {
+        filter: invert(1);
+    }
+
+    tr {
+        background-color: var(--background);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -33,12 +112,6 @@ li {
     gap: 1em;
 }
 
-.menu li:hover {
-    background-color: #ffffff;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
 .menu li {
     padding: 5px 14px;
 }
@@ -46,7 +119,7 @@ li {
 .services {
     position: relative;
 }
-
+/*
 .dropdown {
     background-color: #C0C0C0;
     z-index: 1000;
@@ -60,6 +133,7 @@ li {
 .dropdown li + li {
     margin-top: 10px;
 }
+*/
 .nav-links a {
     text-decoration: none;
 }
@@ -90,73 +164,4 @@ footer {
 a {
     max-height: 32px;
     min-height: 32px;
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: white;
-    }
-
-    .footer {
-        padding: 1% 1% 1% 1%;
-        color: white;
-        background-color: black;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        position: fixed;
-    }
-    
-    .header {
-        background-color: white;
-        color: black;
-    }
-
-    .nav-links a {
-        color: black;
-    }
-
-    hr {
-        border: 0.5px solid black;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color:white;
-    }
-
-    .footer {
-        padding: 1% 1% 1% 1%;
-        color: black;
-        background-color: white;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        position: fixed;
-    }
-
-    .header {
-        background-color: black;
-        color: white;
-    }
-    .nav-links a {
-        color: white;
-    }
-
-    hr {
-        border: 0.5px solid white;
-    }
-
-    .invertable_icon
-    {
-        filter: invert(1);
-    }
-
-    tr {
-        background-color: black;
-    }
 }
