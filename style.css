@@ -154,4 +154,8 @@ a {
     hr {
         border: 0.5px solid white;
     }
+
+    #people_icon {
+        filter: invert(1);
+    }
 }
