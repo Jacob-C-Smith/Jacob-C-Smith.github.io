@@ -31,6 +31,37 @@
     hr {
         border: 0.5px solid var(--foreground);
     }
+
+
+    .collapsible {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 0.5em;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+      }
+      .active {
+        background-color: #8080ff;
+        color: white;
+      }
+
+      .collapsible:hover {
+          background-color: white;
+          color: black;
+      }
+      .content {
+        padding: 0%;
+        display: grid;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .seperate {
+        background-color: black;
+      }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,6 +105,36 @@
 
     tr {
         background-color: var(--background);
+    }
+
+    .collapsible {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 0.5em;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+    }
+    .active {
+      background-color: #8080ff;
+      color: white;
+    }
+
+    .collapsible:hover {
+        background-color: white;
+        color: black;
+    }
+    .content {
+      padding: 0%;
+      display: grid;
+      overflow: hidden;
+      background-color: white;
+    }
+        
+    .seperate {
+      background-color: white;
     }
 }
 

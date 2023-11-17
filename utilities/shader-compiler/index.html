@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Shader Compiler</title>
-        <link rel="icon" type="image/x-icon" href="https://icons.g10.app/g10.ico">
+        <link rel="icon" type="image/x-icon" href="https://icons.g10.app/g10.png">
         <link rel="stylesheet" type="text/css" href="https://g10.app/style.css">
         <meta charset="UTF-8" />
 		<script src="https://unpkg.com/htmx.org@1.9.8"></script>
@@ -38,77 +38,9 @@
 		</style>
     </head>
     <body>
-		<nav class="header" style="z-index: 1;">
-			<ul class="nav-links">
-				<div class="menu">
-					<a href="https://g10.app"> <img src="https://icons.g10.app/g10.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
-					<li class="services"><a href="https://g10.app/g10-desktop">G10 Desktop</a></li>
-                    <li class="services"><a href="https://g10.app/g10-web">G10 Web</a></li>
-					<li class="services"><a href="https://g10.app/gport">Gport</a></li>
-					<li class="services"><a href="https://g10.app/schema">Gschema</a></li>
-					<li class="services">
-						<a href="https://g10.app/people">People</a>
-						<ul class="dropdown">
-							<li> <a class="header_link" href="https://g10.app/people/jake/">Jake </a> </li>
-							<li> <a class="header_link" href="http://benjamindaly.com/">Ben  </a> </li>
-							<li> <a class="header_link" href=".">Aiden</a> </li>
-						</ul>
-					</li>
-					<li class="services">
-						<a href="https://g10.app/products">Products</a>
-						<ul class="dropdown">
-							<li> <a class="header_link" href="https://g10.app/products/tanks">Tanks!</a></li>
-						</ul>
-					</li>
-					<li class="services"><a href="https://g10.app/utilities">Utilities</a></li>
-					<li><a href="https://g10.app/status">Status</a></li>
-				</div>
-			</ul>
-		</nav>
-		<hr>
-        <nav class="header" style="z-index: 1;">
-			<ul class="nav-links">
-				<div class="menu">
-					<a href="https://g10.app/utilities"> <img src="https://icons.g10.app/tool.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
-					<li class="services">
-						<a href="https://g10.app/utilities/shader-compiler/">Shader Compiler</a>
-						<ul class="dropdown">
-							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/shader-compiler/releases/tag/2.0">Releases</a> </li>
-							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/shader-compiler">Source</a> </li>
-                            <li> <a class="header_link"href="https://github.com/Jacob-C-Smith/shader-compiler/#">Manual</a> </li>
-						</ul>
-					</li>
-					<li class="services">
-						<a href="https://g10.app/utilities/ai-tool/">AI Tool</a>
-						<ul class="dropdown">
-							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/ai-tool/releases/latest">Releases</a> </li>
-							<li> <a class="header_link"href="https://github.com/Jacob-C-Smith/ai-tool">Source</a> </li>
-                            <li> <a class="header_link"href="https://github.com/Jacob-C-Smith/ai-tool/#">Manual</a> </li>
-						</ul>
-					</li>
-					<li class="services">
-						<a href="https://g10.app/utilities/input-tool/">Input Tool</a>
-						<ul class="dropdown">
-							<!--<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/input-tool/">Releases</a> </li>
-							<li> <a class="header_link"  href="https://github.com/Jacob-C-Smith/input-tool">Source</a> </li>
-                            <li> <a class="header_link"  href="#">TODO: Manual</a> </li>-->
-						</ul>
-					</li>
-				</div>
-			</ul>
-		</nav>
-		<hr>
-		<nav class="header" style="z-index: 1;">
-			<ul class="nav-links">
-				<div class="menu">
-					<a href="https://g10.app/utilities/shader-compiler"> <img src="https://icons.g10.app/shader-compiler.ico" width="32px" height="32px" style="image-rendering: pixelated;"> </a>
-					<li class="services">
-						<a href="https://g10.app/utilities/shader-compiler">Manual</a>
-					</li>
-				</div>
-			</ul>
-		</nav>
-		<hr>
+		<div hx-get="https://g10.app/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+        <div hx-get="https://g10.app/utilities/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
+        <div hx-get="https://g10.app/utilities/shader-compiler/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 
 		<div class="body" style="padding-top: 1em;">
 			<div style="display: table; width: 100%; justify-content: center; margin: 0; text-align: center;">
