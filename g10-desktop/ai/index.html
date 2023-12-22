@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+<blockquote>
+<ol>
+<li><p><a href="#observations">Observations</a></p>
+</li>
+<li><p><a href="#making-descriptions-from-observations">Making descriptions from observations</a></p>
+</li>
+<li><p><a href="#ai-tool">AI tool</a></p>
+</li>
+<li><p><a href="#programming-the-ai">Programming the AI</a></p>
+</li>
+</ol>
+<blockquote>
+<p>4.1 <a href="#getting-the-ai">Getting the AI</a></p>
+<p>4.2 <a href="#writing-state-functions">Writing state functions</a></p>
+<p>4.3 <a href="#pre-update">Preupdate</a></p>
+<p>4.4 <a href="#setting-up-ai-callbacks">Setting up AI callbakcs</a></p>
+</blockquote>
+</blockquote>
+<h1 id="observations">Observations</h1>
+<p>The Goomba from the Mario franchise is an example of a video game AI. The Goomba can do two things. The Goomba can <strong>walk to the left</strong>, and the Goomba can <strong>attack</strong> the player. These actions can be thought of as states. The &quot;running left&quot; state will move the Goomba to the left. The &quot;attack&quot; state will damage the player, after which the Goomba will return to the &quot;running left&quot; state. For a more complicated example, one may observe the Grunt from the Halo franchise. The Grunt has many states. The Grunt can be idle, alert, sleeping, suicide bombing, attacking the player, or hiding. A Grunt may be in the &quot;attack&quot; state. If you kill the Elite who is leading the grunt, he will get scared, and enter the &quot;hiding&quot; state. A grunt may be in the &quot;idle&quot; state. If the grunt sees you, it may enter the &quot;attack&quot; state, and so on. It would appear that one can describe any automaton by describing its states, and under which circumstances they will change. This abstraction is as simple as it is powerful.</p>
+<h1 id="making-descriptions-from-observations">Making descriptions from observations</h1>
+<p>Using the AI Schema, one can define each state of the AI, and what state the AI will start in. In the case of a Goomba, one might produce something like this.</p>
+<p>Goomba AI.json :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"$schema"</span>       : <span class="hljs-string">"https://raw.githubusercontent.com/Jacob-C-Smith/G10-Schema/main/ai-schema.json"</span>,
+    <span class="hljs-attr">"name"</span>          : <span class="hljs-string">"Goomba"</span>,
+    <span class="hljs-attr">"states"</span>        : [
+        <span class="hljs-string">"running left"</span>,
+        <span class="hljs-string">"attack"</span>
+    ],
+    <span class="hljs-attr">"initial state"</span> : <span class="hljs-string">"running left"</span>
+}
+</code></pre>
+<p>If you would like to, reader, you may try toconfigure an AI in your browser <a href="https://github.dev/Jacob-C-Smith/G10-Schema/blob/main/examples/ai/goomba%20ai.json">right now</a>. Consider how you want your AI to act, and how you might translate these behaviors into states. Make certain to validate your AI against the <a href="https://raw.githubusercontent.com/Jacob-C-Smith/G10-Schema/main/ai-schema.json">AI Schema</a>. If you are using Visual Studio Code, any validation errors in your JSON can be found as warnings in the &quot;Problems&quot; panel of the IDE.  </p>
+<p>When you have configured an AI to your liking, you may add to the entity, the AI object, or a path to a file containing the AI JSON on the filesystem. </p>
+<p>goomba entity.json :</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">"$schema"</span>       : <span class="hljs-string">"https://raw.githubusercontent.com/Jacob-C-Smith/G10-Schema/main/entity-schema.json"</span>,
+    <span class="hljs-string">"name"</span>          : <span class="hljs-string">"Goomba"</span>,
+    <span class="hljs-string">"parts"</span>         : [
+        ...
+    ],
+    ...
+    <span class="hljs-string">"ai"</span> : <span class="hljs-string">"goomba.json"</span>
+}
+</code></pre>
+<h1 id="ai-tool">AI tool</h1>
+<p>I&#39;ve written a standalone UI application for working with AI&#39;s. </p>
+<p>You can download that <a href="https://g10.app/utilities/ai-tool/">here</a> and it looks like this</p>
+<p><img src="https://g10.app/utilities/ai-tool/ai-tool-use.png" alt=""></p>
+<h1 id="programming-the-ai">Programming the AI</h1>
+<p>The following details how to program an AI.</p>
+<h2 id="getting-the-ai">Getting the AI</h2>
+<p>One needs a pointer to the AI which they plan to program. The pointer can be retrieved from a GXEntity_t, or via the caching mechanism.</p>
+<pre><code class="lang-c"><span class="hljs-comment">// Initialized data</span>
+GXInstance_t *p_instance  = g_get_active_instance();
+GXE<span class="hljs-function"><span class="hljs-title">ntity_t</span>   *p_goomba    = get_entity(p_instance-&gt;</span>context.scene, <span class="hljs-string">"Goomba"</span>);
+GXAI_<span class="hljs-function"><span class="hljs-title">t</span>       *p_goomba_ai = p_goomba-&gt;</span>ai;
+</code></pre>
+<p> -or- </p>
+<pre><code class="lang-c">// Initialized data
+GXInstance_t *p_instance  = g_get_active_instance()<span class="hljs-comment">;</span>
+GXAI_t       *p_ai        = g_find_ai(<span class="hljs-name">p_instance</span>, <span class="hljs-string">"Goomba AI"</span>)<span class="hljs-comment">;</span>
+</code></pre>
+<h2 id="writing-state-functions">Writing state functions</h2>
+<p>With a pointer to the AI, one can start to implement states and preupdate functions. Continuing with the Goomba example, one might implement the &quot;running left&quot; and &quot;attack&quot; states like so:</p>
+<pre><code class="lang-c">
+<span class="hljs-comment">// Forward declaration</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hurt_mario</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goomba_state_run_left</span> <span class="hljs-params">( GXEntity_t *p_goomba )</span>
+</span>{
+
+    <span class="hljs-comment">// Initialized data</span>
+    vec3 *goomba_velocity = &amp;p_goomba-&gt;rigidbody-&gt;velocity;
+
+    <span class="hljs-comment">// Set the Goomba's horizontal speed to -1 units / second, </span>
+    goomba_velocity-&gt;x = <span class="hljs-number">-1.</span>f;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goomba_state_attack</span> <span class="hljs-params">( GXEntity_t *p_goomba )</span>
+</span>{
+
+    <span class="hljs-comment">// Damage Mario once</span>
+    hurt_mario();
+
+    <span class="hljs-comment">// Continue moving to the left</span>
+    set_ai_state(p_ai, <span class="hljs-string">"running left"</span>);
+}
+</code></pre>
+<h2 id="pre-update">Pre Update</h2>
+<p>Now that one has working states, one can define under which circumstances those states should change. This means implementing a pre update function. In the case of the Goomba, one approach might look like this:</p>
+<pre><code class="lang-c"><span class="hljs-comment">// Forward declarations</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">colliding_with_mario</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goomba_preupdate</span> <span class="hljs-params">( GXEntity_t *p_goomba )</span>
+</span>{
+
+    <span class="hljs-comment">// Initialized data</span>
+    GXInstance_t *p_instance = g_get_active_instance();
+    GXAI_t       *p_ai       = p_goomba-&gt;ai;
+
+    <span class="hljs-comment">// Are the Goomba and Mario colliding?</span>
+    <span class="hljs-keyword">if</span>( colliding_with_mario() == <span class="hljs-literal">true</span> )
+    {
+
+        <span class="hljs-comment">// Attack state</span>
+        set_ai_state(p_ai, <span class="hljs-string">"attack"</span>);
+    }
+}
+</code></pre>
+<h2 id="setting-up-ai-callbacks">Setting up AI callbacks</h2>
+<p>After implementing each state and preupdate, one can attach the state functions and pre update functions to the AI using the <code>add_ai_state_callback()</code> and <code>set_ai_pre_update_callback()</code> functions. This should be done before the game loop / scheduler starts, and after the AI has been loaded. You, reader, only need to set your callbacks once. You do not need to set them for every entity using your AI.  </p>
+<pre><code class="lang-c" lang="c"><span class="hljs-comment">// Initialize G10</span>
+...
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goomba_state_run_left</span> <span class="hljs-params">( GXEntity_t *p_goomba )</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goomba_state_attack</span>   <span class="hljs-params">( GXEntity_t *p_goomba )</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goomba_preupdate</span>      <span class="hljs-params">( GXEntity_t *p_goomba )</span></span>;
+
+...
+
+<span class="hljs-comment">// Set up the Goomba AI</span>
+add_ai_state_callback(p_ai, <span class="hljs-string">"attack"</span>  , &amp;goomba_state_attack);
+add_ai_state_callback(p_ai, <span class="hljs-string">"running left"</span>, &amp;goomba_state_run_left);
+set_ai_pre_update_callback(p_ai, &amp;goomba_preupdate);
+
+<span class="hljs-comment">// Start the game</span>
+...
+</code></pre>
+<p>You now know how to design and implement an AI using G10. </p>
+<p margin="0 8em 0 0">Written by Jacob Smith</p>
