@@ -10,14 +10,42 @@
     <body>
 		<div hx-get="https://g10.app/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
 		<div hx-get="https://g10.app/g10-web/navbar.html" hx-swap="outerHTML" hx-trigger="load"></div>
-
-		<div class="body">
-			<p>New technologies like WebGPU and WebAssembly are enabling high fidelity, high performance</p>
-			<p style="margin-bottom: 1em;">interactive media on ordinary webpages. That's why I recently started porting G10 to the browser.</p>
-			<p><a href="https://web.g10.app"><iframe src="https://web.g10.app"></iframe></a></p>
-			<em><b>NOTE</b>: If you don't see a triangle here, your browser does not support WebGPU. Try <a href="https://www.google.com/chrome/canary/">Chrome Canary</a>.</em>
-		</div>
 		
+		<div class="body" style="padding-top: 1em;">
+			<div style="display: table; width: 100%; justify-content: center; margin: 0; text-align: center;">
+				<h1 style="margin: 0.75em 0% 0.5em 0%;"><b>G10 Web</b></h1>
+				<div width="100%" style="margin: 0 35%">
+					<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+						<div style="padding: 0;margin: 0% 0% 0em 0%;">
+							G10 Web will be an implementation of the G10 game engine on the web browser. New technologies like WebGPU and WebAssembly are enabling
+							high fidelity, high performance interactive media on ordinary webpages. I know next to nothing about web development, and that's why I
+							started porting G10 to the browser. This page discusses the scope of this project, how it interacts with the rest of G10, and the
+							reasoning behind these decisions.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<h3 style="margin: 2em 0% 1% 0%; text-align: center;">Example</h3>
+			<div width="100%" style="margin: 0 35%; padding-bottom: 1em;;">
+				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+					<div style="padding: 0;margin: 0% 0% 0em 0%;">
+						<p style="margin:0px 12.5%"><a href="https://web.g10.app"><iframe src="https://web.g10.app"></iframe></a></p>
+						<em><b>NOTE</b>: If you don't see a triangle here, your browser does not support WebGPU. Try <a href="https://www.google.com/chrome/canary/">Chrome Canary</a>.</em>
+					</div>
+				</div>
+			</div>
+			<h3 style="margin: 2em 0% 1% 0%; text-align: center;">Scope</h3>
+			<div width="100%" style="margin: 0 35%;padding: 0 0em 8em 0em">
+				<div style="display: grid; width: 100%; justify-content: center; margin: 0; text-align: left;">
+					<div style="padding: 0;margin: 0% 0% 0em 0%;">
+						G10 Web loads G10 assets. This includes instance configurations, shaders, AIs, and anything you might create with gport. G10 Web will implement
+						the scheduler, and support a number of client tasks. You will be able to implement your own tasks if you want. The G10 Web API is written in JavaScript, and closely resembles the G10 Desktop API.
+						
+					</div>
+				</div>
+			</div>
+
 		<div class="footer">
 			<p>G10 Web, Copyright © 2023, Jacob Smith.</p>
 			<p>Made with ❤️ for 👤 on 🌎 </p>
