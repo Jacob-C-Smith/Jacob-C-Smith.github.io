@@ -18,9 +18,18 @@
               text-align: left;
               outline: none;
             }
-            .active {
-              background-color: #8080ff;
-              color: white;
+            @media (prefers-color-scheme: light) {
+                .active {
+                background-color: #8080ff;
+                color: white;
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                .active {
+                background-color: #008080;
+                color: white;
+                }
             }
 
             .collapsible:hover {
