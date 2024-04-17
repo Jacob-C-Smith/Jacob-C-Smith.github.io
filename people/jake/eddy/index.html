@@ -46,6 +46,36 @@
 							<td>Defines relations between a set of eddy programs</td>
 						</tr>
 					</table>
+					<p style="margin: 1em 0 1em 0;">
+						An eddy program looks like this
+						
+						<p><code>
+							< A
+						</code></p>
+						<p><code>
+							< B
+						</code></p>
+						<p><code>
+							ADD
+						</code></p>
+						<p><code>
+							> O
+						</code></p>
+					</p>
+
+					<p style="margin: 1em 0 1em 0;">
+						The program reads
+						
+						<p>push(A)</p>
+						<p>push(B)</p>
+						<p>push( pop() + pop() )</p>
+						<p>O = pop()</p>
+					</p>
+
+					<p style="margin: 1em 0 1em 0;">
+						Programs are used to perform simple calculations on streams of data. The EDDY JIT compiler produces vectorized assembly code automatically. The stack pointer of an EDDY variable is the N in zmmN. 
+					</p>
+
 					<h3 style="margin: 2em 0% 1em 0%; text-align: center;">Pictures</h3>
 					<img src="T/integral.png"  width="456px" />
 					<img src="T/avx2.png"  width="456px" />
