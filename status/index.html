@@ -179,6 +179,7 @@
                                 </td>
                                 <td><p></p></td>
                                 <td><p></p></td>
+                                <td><p></p></td>
                             </tr>
 
                             <tr>
@@ -208,6 +209,7 @@
                                 </td>
                                 <td><p>❌</p></td>
                                 <td><p>❌</p></td>
+                                <td><p></p></td>
                             </tr>
 
                             <tr>
@@ -237,7 +239,7 @@
                                 </td>
                                 <td><p>❌</p></td>
                                 <td><p>❌</p></td>
-                                <td><p>❌</p></td>
+                                <td><p></p></td>
                             </tr>
 
                             <tr>
@@ -265,6 +267,7 @@
                                 <td>
                                     <p><b>NOTE:</b> Not yet under development.</p>
                                 </td>
+                                <td><p></p></td>
                                 <td><p></p></td>
                                 <td><p></p></td>
                             </tr>
@@ -354,6 +357,67 @@
                             
                             <tr class="seperate">
                                 <td colspan="6" style="height: 0.25em;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="collapsible" id="programming_languages" name="programming_languages">⚠️Programming Languages</button>
+                    <div class="content" >
+                        <table style="border-collapse: collapse;margin: 0%;width: 100%;">
+                            <tr class="seperate">
+                                <td colspan="7" style="height: 0.25em;"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Name</b>/Description&nbsp;&nbsp;&nbsp;</td>
+                                <td><b>Icon</b></td>
+                                <td><b>CI/CD status</b></td>
+                                <td><b>Notes</b></td>
+                                <td><b style="padding-right: 1em;">Tested?</b> </td>
+                                <td><b style="padding-right: 1em;">Thread safe? </b> </td>
+                                <td><b style="padding-right: 1em;">Try it! </b> </td>
+                            </tr>
+                            <tr class="seperate">
+                                <td colspan="7" style="height: 0.25em;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3> eddy </h3>
+                                    <p>A SIMD powered programming language</p>
+                                </td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/eddy">
+                                            <img src="https://icons.g10.app/eddy.png" style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/eddy"><img src="https://github.com/Jacob-C-Smith/eddy/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                </td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td></td>
+                            </tr>
+    
+                            <tr>
+                                <td>
+                                    <h3> nami </h3>
+                                    <p>A general purpose programming language</p>
+                                </td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/nami">
+                                            <img src="https://icons.g10.app/nami.png" style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/nami"><img src="https://github.com/Jacob-C-Smith/nami/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td></td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td></td>
+                            </tr>
+                            <tr class="seperate">
+                                <td colspan="7" style="height: 0.25em;"></td>
                             </tr>
                         </table>
                     </div>
@@ -469,25 +533,6 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <h3> eddy </h3>
-                                    <p>SIMD powered, JIT-compiled programming language</p>
-                                </td>
-                                <td>
-                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/eddy"><img style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/eddy.png"></a>
-                                    </div>
-                                </td>
-                                <td><a href="https://github.com/Jacob-C-Smith/eddy"><img src="https://github.com/Jacob-C-Smith/eddy/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
-                                <td>
-                                    <p><b>NOTE:</b> I'm not actively working on this right now. </p>
-                                    <p><b>NOTE:</b> Under development. No stable release.</p>
-                                </td>
-                                <td>❌</td>
-                                <td>❌</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
                                     <h3> parallel </h3>
                                     <p>Abstractions for performant computation on many cores</p>
                                 </td>
@@ -513,7 +558,7 @@
                                 <td>⚠️</td>
                                 <td><a href="https://codespaces.new/Jacob-C-Smith/parallel?quickstart=1" rel="nofollow"><img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces" style="max-width: 100%;"></a></td>
                             </tr>
-                            <tr>
+                            <tr></tr>
                                 <td>
                                     <h3> renderer </h3>
                                     <p>A physically based renderer</p>
@@ -535,6 +580,26 @@
                                 </td>
                                 <td>❌</td>
                                 <td>❌</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3> stream processor </h3>
+                                    <p>Stream processor</p>
+                                </td>
+                                <td>
+                                    <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                        <a href="https://github.com/Jacob-C-Smith/stream-processor">
+                                                <img src="https://icons.g10.app/stream-processor.png" style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td><a href="https://github.com/Jacob-C-Smith/stream-processor"><img src="https://github.com/Jacob-C-Smith/stream-processor/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
+                                <td>
+                                    <p><b>NOTE:</b> Not yet under development.</p>
+                                </td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -630,12 +695,9 @@
                                 </td>
                                 <td>
                                     <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
-                                        <a href="https://github.com/Jacob-C-Smith/glufs">
-                                            <picture>
-                                                <source srcset="https://icons.g10.app/glufs-dark.png" media="(prefers-color-scheme: dark)">
-                                                <img src="https://icons.g10.app/glufs-light.png" style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;">
-                                            </picture>
-                                        </a>
+                                        <div style="display: inline-block;justify-content: center;margin: 0px;text-align: center;">
+                                            <a href="https://github.com/Jacob-C-Smith/glufs"><img class="invertable_icon" style="margin:0.5em 0em 0.5em 0em;padding: 0em 1em 0em 1em;" src="https://icons.g10.app/glufs-light.png"></a>
+                                        </div>
                                     </div>
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/glufs"><img src="https://github.com/Jacob-C-Smith/glufs/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
@@ -1199,8 +1261,6 @@
                                 </td>
                                 <td><a href="https://github.com/Jacob-C-Smith/socket"><img src="https://github.com/Jacob-C-Smith/socket/actions/workflows/cmake.yml/badge.svg?branch=main"></a></td>
                                 <td>
-                                    <p><b>TODO:</b> Hostname resolution</p>
-                                    <p><b>TODO:</b> TCP connect</p>
                                     <p><b>TODO:</b> UDP support</p>
                                 </td>
                                 <td>☑️</td>
@@ -1289,6 +1349,7 @@
                                 <td><b>DONE</b></td>
                                 <td>☑️</td>
                                 <td>☑️</td>
+                                <td><p></p></td>
                             </tr>
                             <tr class="seperate">
                                 <td colspan="7" style="height: 0.25em;"></td>
